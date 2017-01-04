@@ -8,7 +8,7 @@ This is a work in progress / in active development, but already pretty useful.
 Uses this excellent [graphql-php](https://github.com/webonyx/graphql-php) library.
 
 ##Install
-`composer require mohiohio/graphql-wp`
+`composer require rocketmonkey/graphql-wp`
 
 Assuming you have something like this in your composer.json file ( so it knows to install it in your plugin directory )
 ```json
@@ -33,17 +33,17 @@ The best way to explore / develop with this is by using a tool such as [ChromeiQ
 ###wp_query
 This is designed to follow WordPress' existing WP Query functions.  So as a rule you can pass the same parameters as your can to [WP Query](https://codex.wordpress.org/Class_Reference/WP_Query)*.
 
-**In reality there are a lot of params you can pass to WP_Query, and I've only implemented the ones that I've needed so far. But adding more is trivial as the arguments are just passed directly to the get_posts function, so its just a matter of defining them in the schema.* 
+**In reality there are a lot of params you can pass to WP_Query, and I've only implemented the ones that I've needed so far. But adding more is trivial as the arguments are just passed directly to the get_posts function, so its just a matter of defining them in the schema.*
 
  ```json
- {"query":"{ 
-    	wp_query { 
-    		posts(paged: 1 posts_per_page: 10)  { 
-    			title 
-    			name 
-    			terms (taxonomy:\"category\") { 
-    				name 
-    				slug 
+ {"query":"{
+    	wp_query {
+    		posts(paged: 1 posts_per_page: 10)  {
+    			title
+    			name
+    			terms (taxonomy:\"category\") {
+    				name
+    				slug
     			}
     		}
     	}
@@ -67,12 +67,12 @@ Will give you
               ]
            } ...
 
-Also available on wp_query menu 
+Also available on wp_query menu
 
     {"query":
-	    "{ wp_query 
-		    { menu(name: \"Main Menu\")  { 
-			    title 
+	    "{ wp_query
+		    { menu(name: \"Main Menu\")  {
+			    title
 			    url
 			}
 		}

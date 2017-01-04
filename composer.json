@@ -1,5 +1,5 @@
 {
-  "name": "mohiohio/graphql-wp",
+  "name": "rocketmonkey/graphql-wp",
   "description": "A GraphQL endpoint for WordPress",
   "type": "wordpress-plugin",
   "license": "GPL",
@@ -7,19 +7,17 @@
     {
       "name": "Tim Field",
       "email": "field.tim@gmail.com"
-    }
-  ],
-  "repositories": [
+    },
     {
-      "type": "vcs",
-      "url": "https://github.com/rocket-monkey/graphql-php.git"
+      "name": "Remo Vetere",
+      "email": "remo.vetere@gmail.com"
     }
   ],
   "require": {
     "php": ">=5.6",
     "mohiohio/wordpress-lib": "^0.1",
-    "webonyx/graphql-php": "dev-patchfix-directive-locations",
-    "ivome/graphql-relay-php": "^0.1.2",
+    "webonyx/graphql-php": "^v0.7.0",
+    "ivome/graphql-relay-php": "^0.3.1",
     "danielstjules/stringy": "^2.3"
   },
   "autoload": {
